@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float을 이용한 레이아웃</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        *{margin:0; padding:0;}
+        #wrap{width:960px; margin:0 auto;}
+        header,.left,.right,footer{border-radius:10px;}
+        
+        header{width:960px; height:100px; line-height:100px; text-align:center; background-color:gray;}
+        
+        section{*zoom:1;}        
+        section>article.left:after{display:block; clear:both; content:"";}
+        section>.left{float:left; width:200px; height:390px;}
+        section>.left>.a{width:200px; height:250px; line-height:250px; text-align:center; background-color:blue;}
+        section>.left>.b{width:200px; height:140px; line-height:250px; text-align:center; background-color:pink;}
+        
+        section>.right{width:750px; height:500px; line-height:500px; text-align:center; background-color:yellow;}
+        
+        footer{width:960px; height:100px; line-height:100px; text-align:center; background-color:darkred;}
+        
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header><h1>메인메뉴</h1></header>
+    <section>
+        <article class="left">
+            <p class="a">왼쪽</p>
+            <p class="b">왼쪽2</p>
+        </article>
+        <article class="right">
+            <p>컨텐츠</p>
+        </article>
+    </section>
+    
+    <footer><p>푸터</p></footer>
+</div>
+</body>
+</html>

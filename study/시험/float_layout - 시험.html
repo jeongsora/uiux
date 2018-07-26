@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float을 이용한 레이아웃</title>
+    <link rel="shortcut icon" href="../html5/images/favicon.ico">
+    <style>
+        *{margin:0;padding:0;}
+        
+        /* CSS 코드를 작성하세요 */
+        header,.left,.cont,footer{border:1px solid black;}
+        #wrap{width:700px; margin:0 auto;}
+        header{width:698px; margin-top:30px; line-height:148px; text-align:center;}
+        header>h1{font-weight:400; font-size:1rem;}
+        section{*zoom:1;}
+        section:after{display:block; clear:both; content:"";}
+        section>.left{float:left; width:250px; margin:10px 10px 10px 0; line-height:400px; text-align:center;}
+        section>.cont{float:left; width:436px; margin-top:10px; line-height:400px; text-align:center;}
+        footer{width:698px; line-height:98px; text-align:center;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+	<header><h1>메인메뉴 영역</h1></header>
+	<section>
+		<article class="left">서브메뉴</article>
+		<article class="cont">본문내용</article>
+	</section>
+	<footer><address>&copy;Designed by 홍길동</address></footer>
+</div>    
+            
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;}		
+/* CSS 코드를 작성하세요 */
+#wrap{
+width:960px; margin:30px auto 0; 
+/*텍스트관련 속성은 자손에게 상속된다.*/
+text-align:center; font-weight:800; font-size:2em; 
+}
+            header,.lnb,.ad,.cont,footer{border-radius:10px;}
+            header{height:100px; background-color:gray;}
+            section:after{display:block; clear:both; content:"";} 
+            /*clear는 반드시 block속성에서만 적용된다. clear은 플롯의 영향력 차단효과. 가상선택자 :after는 반드시 content 속성이 필요*/
+            section{margin:10px 0; *zoom:1;}
+            section>.left{float:left; width:200px;}
+            section>.left>.lnb{height:250px; background-color:blue;}
+            section>.left>.ad{height:140px; margin-top:10px; background-color:pink;}
+            section>.cont{float:right; /*수치계산을 할 필요가 없다*/
+                width:750px; height:400px; background-color:yellow;}
+            footer{height:100px; background-color:brown;}
+/*반응형 - 모바일*/
+@media screen and (max-width:768px)
+{#wrap{width:100%; margin:0;} 
+    section>.left{float:none; width:100%;} 
+    section>.cont{float:none; width:100%; margin-top:10px;}}
